@@ -42,6 +42,11 @@
                 "glob": "**/*",
                 "input": "node_modules/@eui/styles-base/src/assets/",
                 "output": "./assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/@ecl/ecl-webcomponents/dist/ecl-webcomponents/",
+                "output": "./"
               }
             ],
             "styles": [
