@@ -37,5 +37,8 @@ import { defineCustomElements } from '@ecl/ecl-webcomponents/loader';
     bootstrap: [
         AppComponent,
     ],
+    schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+    ]
 })
 export class AppModule { }
