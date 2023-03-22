@@ -2,290 +2,52 @@
     <eui-page-header label="{{ 'page.home.title' | translate }}"></eui-page-header>
 
     <eui-page-content>
-        <ecl-banner variant="plain-background"
-                    theme="ec"
-                    cta-link="/example.html"
-                    cta-label="Subscribe"
-                    image="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
-                    banner-title="Headline sed elit lorem."
-                    credit="© Copyright or credit"
-                    centered=true
-                    size="m">
-            Pellentesque tempor tincidunt quam, finibus vulputate eros iaculis pharetra orci arcu, dictum maximus arcu
-            pellentesque eget. Cras massa nunc.
-        </ecl-banner>
+        <ecl-form-group label="Label"
+                        required=true
+                        optional-text="(optional)"
+                        helper-text="This is the input helper text"
+                        invalid=false
+                        disabled=false
+                        invalid-text="This is an error message"
+                        theme="ec">
+            <div class="ecl-u-d-flex"
+                 style="align-items: baseline">
+                <ecl-input #sectionEclInput
+                           type="text"
+                           theme="ec"
+                           input-id="input-id"
+                           default-value=""
+                           placeholder="Section name.."
+                           name="input-name"
+                           default-value=""
+                           value="">
 
-        <ecl-icon icon="close"
-                  color="default"
-                  size="m"
-                  transform=""
-                  theme="ec">
-        </ecl-icon>
-        <ecl-news-ticker theme="ec"
-                         ecl-script
-                         counter-label="of"
-                         sr-next="Next item"
-                         sr-prev="Prev item"
-                         sr-pause="Pause news ticker">
-            <ecl-news-ticker-item theme="ec"
-                                  path="/example.html">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit'
-            </ecl-news-ticker-item>
-            <ecl-news-ticker-item theme="ec"
-                                  path="/example.html">
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat
-            </ecl-news-ticker-item>
-            <ecl-news-ticker-item theme="ec"
-                                  path="/example.html">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
-            </ecl-news-ticker-item>
-            <ecl-news-ticker-item theme="ec"
-                                  path="/example.html">
-                Excepteur sint occaecat cupidatat officia deserunt mollit anim id est laborum
-            </ecl-news-ticker-item>
-            <ecl-news-ticker-item theme="ec"
-                                  path="/example.html">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-            </ecl-news-ticker-item>
-            <ecl-news-ticker-item theme="ec"
-                                  path="/example.html">
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni
-                dolores
-            </ecl-news-ticker-item>
-        </ecl-news-ticker>
+                </ecl-input>
 
-        <br />
+                <ecl-button type="primary"
+                            data-ecl-button-icon
+                            theme="ec"
+                            class="ecl-u-d-block ecl-u-mb-m"
+                            (click)="onAddSection(sectionEclInput)">
+                    Add section
+                    <ecl-icon slot="icon-after"
+                              icon="plus"
+                              theme="ec"
+                              transform="">
+                    </ecl-icon>
+                </ecl-button>
+            </div>
+        </ecl-form-group>
 
-        <ecl-button type="secondary"
-                    data-ecl-button-icon
-                    theme="ec">
-            Button
-        </ecl-button>
-
-        <br />
-
-        <ecl-blockquote author="President Juncker"
-                        theme="ec"
-                        image=""
-                        image-alt="Image alternative text">
-            An interconnected grid will help deliver the ultimate goal of the Energy Union,
-            to make sure affordable, secure and sustainable energy, and also growth across the EU.
-        </ecl-blockquote>
-
-        <br />
-
-        <ecl-expandable theme="ec"
-                        id="expandable-example"
-                        label-collapsed="Expand"
-                        label-expanded="Collapse"
-                        with-utils
-                        ecl-script>
-            <p class="ecl-u-type-paragraph-m">
-                The EU is building an energy union that ensures Europe’s energy supply is safe,
-                viable and accessible to all. In doing so, it can boost the economy and attract investments that can
-                create new jobs
-                opportunities.
-            </p>
-        </ecl-expandable>
-
-        <br />
-
-        <ecl-message message-title="Information message"
-                     theme="ec"
-                     variant="information"
-                     close-label="Close"
-                     ecl-script>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan semper lorem, ac mollis lacus
-            tincidunt eu. Duis scelerisque diam eu tempus fringilla.
-        </ecl-message>
-
-        <ecl-timeline theme="ec"
-                      ecl-script>
-            <ecl-timeline-item label="13 September 2017"
-                               item-title="Item title"
-                               itemId="0">
-                <a href="/example.html"
-                   class="ecl-link">President Juncker's State of the Union speech</a>
-            </ecl-timeline-item>
-            <ecl-timeline-item item-id="1"
-                               label="28-29 September 2017">
-                <a href="/example.html"
-                   class="ecl-link">Informal Digital Summit, Tallinn</a>
-            </ecl-timeline-item>
-            <ecl-timeline-item item-id="2"
-                               label="14 November 2017">
-                <a href="/example.html"
-                   class="ecl-link">Strengthening European identity through education and culture: European Commission's
-                    contribution to the Leaders' meeting, Gothenburg, Sweden</a>
-            </ecl-timeline-item>
-            <ecl-timeline-item item-id="3"
-                               label="17 November 2017">
-                <a href="/example.html"
-                   class="ecl-link">Social Summit in Gothenburg, Sweden</a>
-            </ecl-timeline-item>
-            <ecl-timeline-item item-id="4"
-                               label="6 December 2017">
-                <a href="/example.html"
-                   class="ecl-link">Economic and Monetary Union package of proposals</a>
-            </ecl-timeline-item>
-            <ecl-timeline-item type="toggle">
-                Show/Hide hidden items
-            </ecl-timeline-item>
-            <ecl-timeline-item item-id="5"
-                               label="14-15 December 2017"
-                               style-class="ecl-timeline__item--collapsed">
-                <a href="/example.html"
-                   class="ecl-link">EU Leaders' meeting on migration, Brussels</a>
-            </ecl-timeline-item>
-            <ecl-timeline-item item-id="6"
-                               label="15 December 2017">
-                <a href="/example.html"
-                   class="ecl-link">Euro Summit</a>
-            </ecl-timeline-item>
-            <ecl-timeline-item item-id="7"
-                               label="6 February 2018">
-                <a href="/example.html"
-                   class="ecl-link">EU-Western Balkans Strategy</a>
-            </ecl-timeline-item>
-            <ecl-timeline-item item-id="8"
-                               label="14 February 2018">
-                <a href="/example.html"
-                   class="ecl-link">Multiannual Financial Framework</a> and <a href="/example.html"
-                   class="ecl-link">institutional issues</a> - enhancing efficiency at the helm of the European Union
-            </ecl-timeline-item>
-            <ecl-timeline-item item-id="9"
-                               label="23 February 2018">
-                <a href="/example.html"
-                   class="ecl-link">Informal European Council</a>
-            </ecl-timeline-item>
-            <ecl-timeline-item item-id="10"
-                               label="22-23 March 2018">
-                <a href="/example.html"
-                   class="ecl-link">European Council</a>
-            </ecl-timeline-item>
-            <ecl-timeline-item item-id="11"
-                               label="2 May 2018">
-                <a href="/example.html"
-                   class="ecl-link">Commission proposal: Long-term budget post-2020</a>
-            </ecl-timeline-item>
-            <ecl-timeline-item item-id="12"
-                               label="15 May 2018">
-                <a href="/example.html"
-                   class="ecl-link">European Commission’s contribution to the Informal Leaders' meeting</a>, Sofia,
-                Bulgaria (16 May 2018)
-            </ecl-timeline-item>
-            <ecl-timeline-item item-id="13"
-                               label="17 May 2018">
-                <a href="/component-library/example"
-                   class="ecl-link">EU-Western Balkans Summit</a> (Sofia, Bulgaria)
-            </ecl-timeline-item>
-        </ecl-timeline>
-
-        <ecl-gallery theme="ec"
-                     ecl-script
-                     counter-label="Media files in this gallery"
-                     view-all-label="View all"
-                     counter-separator="of"
-                     next-label="Next"
-                     prev-label="Previous"
-                     close-label="Close"
-                     download-label="Download"
-                     share-label="Share">
-            <ecl-gallery-item theme="ec"
-                              meta="Copyright, Author, Licence for image 1"
-                              media-share-path="/example.html"
-                              media-href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
-                              image-alt="Image 1">
-                The EU in brief, institutions and bodies, countries, symbols, history, facts and figures
-            </ecl-gallery-item>
-            <ecl-gallery-item theme="ec"
-                              type="video"
-                              meta="Copyright, Author, Licence for embedded media"
-                              media-href="https://inno-ecl.s3.amazonaws.com/media/examples/example-external-video.jpg"
-                              image-alt="New digital strategy"
-                              media-iframe-href="https://www.youtube.com/embed/fgi-GSCB6ho">
-                New digital strategy
-            </ecl-gallery-item>
-            <ecl-gallery-item theme="ec"
-                              meta="Copyright, Author, Licence for image 2"
-                              media-share-path="/example.html"
-                              media-href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg"
-                              image-alt="Image 2">
-                Information on agriculture, business, culture, health, etc.
-            </ecl-gallery-item>
-            <ecl-gallery-item theme="ec"
-                              meta="Copyright, Author, Licence for image 3"
-                              media-share-path="/example.html"
-                              media-href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image3.jpg"
-                              image-alt="Image 3">
-                Living, working, travelling in the EU
-            </ecl-gallery-item>
-            <ecl-gallery-item theme="ec"
-                              meta="Copyright, Author, Licence for image 4"
-                              media-share-path="/example.html"
-                              media-href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image4.jpg"
-                              image-alt="Image 3">
-                Information on taxes, customs, importing and exporting goods, financial support for businesses
-            </ecl-gallery-item>
-            <ecl-gallery-item theme="ec"
-                              media-share-path="/example.html"
-                              meta="Copyright, Author, Licence for video"
-                              type="html-video">
-                EU law
-                <video slot="video"
-                       class="ecl-gallery__image sc-ecl-gallery-ec"
-                       poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image5.jpg">
-                    <source src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
-                            type="video/mp4" />
-                    <source src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
-                            type="video/webm" />
-                    <track kind="captions"
-                           label="English"
-                           src="/captions/bunny-en.vtt"
-                           srclang="en" />
-                    <track kind="captions"
-                           label="français"
-                           src="/captions/bunny-fr.vtt"
-                           srclang="fr" />
-                </video>
-            </ecl-gallery-item>
-            <ecl-gallery-item theme="ec"
-                              meta="Copyright, Author, Licence for image 6"
-                              media-share-path="/example.html"
-                              media-href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image6.jpg"
-                              image-alt="Image 6">
-                Find official documents, publications, statistics, open data and more resources
-            </ecl-gallery-item>
-            <ecl-gallery-item theme="ec"
-                              meta="Copyright, Author, Licence for image 7"
-                              media-share-path="/example.html"
-                              media-href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image7.jpg"
-                              image-alt="Image 7">
-                Teaching material about the EU, including books and maps
-            </ecl-gallery-item>
-            <ecl-gallery-item theme="ec"
-                              meta="Copyright, Author, Licence for image 8"
-                              media-share-path="/example.html"
-                              media-iframe-href="https://audiovisual.ec.europa.eu/embed/index.html?ref=I-223223&lg=EN"
-                              media-href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image8.jpg"
-                              image-alt="Image 8">
-                Teaching material about the EU, including books and maps
-            </ecl-gallery-item>
-            <ecl-gallery-item theme="ec"
-                              meta="Copyright, Author, Licence for image 9"
-                              media-share-path="/example.html"
-                              media-href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image9.jpg"
-                              image-alt="Image 9">
-                About the EU
-            </ecl-gallery-item>
-            <ecl-gallery-item theme="ec"
-                              meta="Copyright, Author, Licence for image 10"
-                              media-share-path="/example.html"
-                              media-href="https://inno-ecl.s3.amazonaws.com/media/examples/example-image10.jpg"
-                              image-alt="Image 10">
-                EU by topic
-            </ecl-gallery-item>
-        </ecl-gallery>
+        <ecl-accordion theme="ec"
+                       with-utils
+                       ecl-script>
+            <ecl-accordion-item *ngFor="let item of accordionItems"
+                                [attr.id]="item.id"
+                                [attr.label]="item.label"
+                                theme="ec">
+                {{ item.content }}
+            </ecl-accordion-item>
+        </ecl-accordion>
     </eui-page-content>
 </eui-page>
