@@ -172,7 +172,69 @@
             </ecl-accordion-item>
         </ecl-accordion>
 
-        <h2>News ticker</h2>
+        <h2>File</h2>
+        <ecl-file variant="thumbnail"
+                  theme="ec"
+                  file-title="State of the Union 2018 brochure"
+                  download-link="/example.html"
+                  download-label="Download"
+                  language="English"
+                  meta="(16.2 MB - PDF)"
+                  image="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+                  image-alt="thumbnail alt"
+                  detail-meta='["Resource type", "Publication date"]'
+                  ecl-script
+                  taxonomies-label="Taxonomy list"
+                  taxonomies='["Taxonomy item 1",{"label": "Taxonomy item 2", "path": "/example.html"},"Taxonomy item 3"]'
+                  labels='[{"variant": "highlight", "label": "Highlight"}, {"variant": "medium", "label": "Medium"}]'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis lorem
+            tellus. Nullam sollicitudin suscipit diam, ac blandit ipsum tempor consectetur. Duis vitae pulvinar turpis.
+            Donec maximus pharetra ex a ultricies.
+            <ecl-file-translations theme="ec"
+                                   toggle-label="Other languages"
+                                   others
+                                   slot="file-translations">
+                <ecl-file-translations-item *ngFor="let file of files"
+                                            [attr.language]="file"
+                                            download-label="Download"
+                                            download-link="/example.html"
+                                            meta="(15.7 MB - PDF)"
+                                            [attr.file-title]="file"
+                                            variant="thumbnail"
+                                            theme="ec">
+                </ecl-file-translations-item>
+
+                <p slot="others">
+                    Looking for another language which is not on the list? <a href="/example.html"
+                       class="ecl-link">Find out why</a>.
+                </p>
+            </ecl-file-translations>
+        </ecl-file>
+        <ecl-button type="primary"
+                    data-ecl-button-icon
+                    theme="ec"
+                    class="ecl-u-d-block ecl-u-mb-m"
+                    (click)="onAddFile()">
+            Add language
+            <ecl-icon slot="icon-after"
+                      icon="plus"
+                      theme="ec"
+                      transform="">
+            </ecl-icon>
+        </ecl-button>
+
+        <h2>Message</h2>
+        <ecl-message message-title="Information message"
+                     theme="ec"
+                     variant="information"
+                     close-label="Close"
+                     ecl-script>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan semper lorem, ac mollis lacus
+            tincidunt eu. Duis scelerisque diam eu tempus fringilla.
+        </ecl-message>
+
+        <h2>News Ticker</h2>
+
         <ecl-news-ticker theme="ec"
                          ecl-script
                          counter-label="of"

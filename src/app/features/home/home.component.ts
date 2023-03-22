@@ -12,9 +12,9 @@ export class HomeComponent {
         { id: 'id-' + uuidv4(), label: 'Accordion item 3', content: 'Content 3' },
     ];
 
-    constructor(@Inject(CONFIG_TOKEN) private config: EuiAppConfig) {
-        console.log(config);
-    }
+    files = ['pl', 'de', 'fr', 'lu'];
+
+    constructor(@Inject(CONFIG_TOKEN) private config: EuiAppConfig) { }
 
     onAddSection(sectionName: HTMLEclInputElement) {
         const input: HTMLInputElement = sectionName.querySelector('.ecl-text-input');
@@ -26,5 +26,12 @@ export class HomeComponent {
         ];
 
         input.value = '';
+    }
+
+    onAddFile() {
+        this.files = [
+            ...this.files,
+            'Language - ' + Math.random().toString()
+        ];
     }
 }
