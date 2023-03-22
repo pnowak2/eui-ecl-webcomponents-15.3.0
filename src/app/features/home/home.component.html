@@ -2,6 +2,128 @@
     <eui-page-header label="{{ 'page.home.title' | translate }}"></eui-page-header>
 
     <eui-page-content>
+        <h2>Site header</h2>
+        <ecl-site-header ecl-script
+                         theme="ec"
+                         login-block
+                         language-block
+                         search-block
+                         search-text="search"
+                         search-placeholder="Placeholder text"
+                         language="english"
+                         lang-code="en"
+                         login-text="Log in"
+                         eu-label="Official EU languages:"
+                         non-eu-label="Other languages:"
+                         language-title="Choose your language"
+                         login-link="/example.html"
+                         language-id="language-switcher"
+                         logo-alt="European Commission"
+                         logo-title="European commission"
+                         language-aria-label="Choose language">
+            <ecl-language-item slot="eu-category"
+                               path="/example.html"
+                               lang-code="bg"
+                               language="български"></ecl-language-item>
+            <ecl-language-item slot="eu-category"
+                               path="/example.html"
+                               lang-code="es"
+                               language="español"></ecl-language-item>
+            <ecl-language-item slot="eu-category"
+                               path="/example.html"
+                               lang-code="cs"
+                               language="čeština"></ecl-language-item>
+            <ecl-language-item slot="eu-category"
+                               path="/example.html"
+                               lang-code="da"
+                               language="dansk"></ecl-language-item>
+            <ecl-language-item slot="eu-category"
+                               path="/example.html"
+                               lang-code="de"
+                               language="Deutsch"></ecl-language-item>
+            <ecl-language-item slot="eu-category"
+                               path="/example.html"
+                               lang-code="et"
+                               language="eesti"></ecl-language-item>
+            <ecl-language-item slot="eu-category"
+                               path="/example.html"
+                               lang-code="el"
+                               language="ελληνικά"></ecl-language-item>
+            <ecl-language-item slot="eu-category"
+                               path="/example.html"
+                               lang-code="en"
+                               language="English"
+                               active></ecl-language-item>
+            <ecl-language-item slot="eu-category"
+                               path="/example.html"
+                               lang-code="fr"
+                               language="français"></ecl-language-item>
+            <ecl-language-item slot="eu-category"
+                               path="/example.html"
+                               lang-code="ga"
+                               language="Gaeilge"></ecl-language-item>
+            <ecl-language-item slot="eu-category"
+                               path="/example.html"
+                               lang-code="hr"
+                               language="hrvatski"></ecl-language-item>
+            <ecl-language-item slot="eu-category"
+                               path="/example.html"
+                               lang-code="it"
+                               language="italiano"></ecl-language-item>
+            <ecl-language-item slot="non-eu-category"
+                               path="/example.html"
+                               lang-code="zh"
+                               language="中文"></ecl-language-item>
+            <ecl-language-item slot="non-eu-category"
+                               path="/example.html"
+                               lang-code="tr"
+                               language="Türk"></ecl-language-item>
+        </ecl-site-header>
+
+        <ecl-page-header variant="negative"
+                         theme="ec"
+                         header-title="Page title"
+                         image="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg"
+                         thumbnail="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg"
+                         thumbnail-alt="Europe map"
+                         meta="Meta info | DD Month YYYY">
+            <ecl-breadcrumb slot="breadcrumb"
+                            variant="negative"
+                            theme="ec"
+                            ecl-script>
+                <ecl-breadcrumb-item path="/example.html"
+                                     theme="ec">
+                    Home
+                </ecl-breadcrumb-item>
+                <ecl-breadcrumb-item theme="ec"
+                                     ellipsis
+                                     button-aria-label="Click to expand">
+                </ecl-breadcrumb-item>
+                <ecl-breadcrumb-item path="/example.html"
+                                     theme="ec">
+                    About the European Commission
+                </ecl-breadcrumb-item>
+                <ecl-breadcrumb-item path="/example.html"
+                                     theme="ec">
+                    Organisational structure
+                </ecl-breadcrumb-item>
+                <ecl-breadcrumb-item path="/example.html"
+                                     theme="ec">
+                    How the Commission is organised
+                </ecl-breadcrumb-item>
+                <ecl-breadcrumb-item current-page
+                                     theme="ec">
+                    News
+                </ecl-breadcrumb-item>
+            </ecl-breadcrumb>
+            Lorem ipsum dolor sit amet, <a class="ecl-link"
+               href="/example.html">consectetur adipiscing elit</a>.
+            Quisque nec ullamcorper mi. Morbi interdum fermentum tempus. Nam nec rhoncus risus,
+            <a class="ecl-link"
+               href="/example.html">eget dictum elit</a>. Vestibulum gravida tincidunt venenatis.
+        </ecl-page-header>
+
+        <h2>Dynamic accordion</h2>
         <ecl-form-group label="Label"
                         required=true
                         optional-text="(optional)"
@@ -49,5 +171,664 @@
                 {{ item.content }}
             </ecl-accordion-item>
         </ecl-accordion>
+
+        <h2>News ticker</h2>
+        <ecl-news-ticker theme="ec"
+                         ecl-script
+                         counter-label="of"
+                         sr-next="Next item"
+                         sr-prev="Prev item"
+                         sr-pause="Pause news ticker">
+            <ecl-news-ticker-item theme="ec"
+                                  path="/example.html">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+            </ecl-news-ticker-item>
+            <ecl-news-ticker-item theme="ec"
+                                  path="/example.html">
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat
+            </ecl-news-ticker-item>
+            <ecl-news-ticker-item theme="ec"
+                                  path="/example.html">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+            </ecl-news-ticker-item>
+            <ecl-news-ticker-item theme="ec"
+                                  path="/example.html">
+                Excepteur sint occaecat cupidatat officia deserunt mollit anim id est laborum
+            </ecl-news-ticker-item>
+            <ecl-news-ticker-item theme="ec"
+                                  path="/example.html">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+            </ecl-news-ticker-item>
+            <ecl-news-ticker-item theme="ec"
+                                  path="/example.html">
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni
+                dolores
+            </ecl-news-ticker-item>
+        </ecl-news-ticker>
+
+        <h2>Popover</h2>
+        <ecl-popover ecl-script
+                     theme="ec"
+                     toggle-label="Popover"
+                     list
+                     icon="share"
+                     item-id="popover-example">
+            <ecl-popover-item path="/example.html"
+                              icon="global">
+                Item 1
+            </ecl-popover-item>
+            <ecl-popover-item path="/example.html"
+                              icon="global">
+                Item 2
+            </ecl-popover-item>
+            <ecl-popover-item path="/example.html"
+                              icon="global">
+                Item 3
+            </ecl-popover-item>
+            <ecl-popover-item path="/example.html"
+                              icon="global">
+                Item 4
+            </ecl-popover-item>
+            <ecl-popover-item path="/example.html"
+                              icon="global">
+                Item 5
+            </ecl-popover-item>
+            <ecl-popover-item path="/example.html"
+                              icon="global">
+                Item 6
+            </ecl-popover-item>
+            <ecl-popover-item path="/example.html"
+                              icon="global">
+                Item 7
+            </ecl-popover-item>
+            <ecl-popover-item path="/example.html"
+                              icon="global">
+                Item 8
+            </ecl-popover-item>
+        </ecl-popover>
+
+        <h2>Forms</h2>
+        <ecl-form-group label="Label"
+                        required=true
+                        optional-text=" (optional)"
+                        helper-text="This is the input's helper text."
+                        invalid=false
+                        disabled=false
+                        invalid-text="This is the error message"
+                        theme="ec">
+            <ecl-datepicker required=true
+                            disabled=false
+                            invalid=false
+                            input-id="ecl-datepicker"
+                            default-value="11-10-2021"
+                            placeholder="DD-MM-YYYY">
+            </ecl-datepicker>
+        </ecl-form-group>
+
+        <ecl-form-group helper-text="This is the input helper text."
+                        helper-id="helper-id"
+                        invalid=false
+                        invalid-text="This is the error message"
+                        invalid-icon="error"
+                        optional-text="(optional)"
+                        label="Select a country"
+                        required=true
+                        disabled="false">
+            <ecl-select required=true
+                        invalid=false
+                        disabled=false
+                        multiple=true
+                        multiple-placeholder="Select an item"
+                        multiple-search-text="Enter keyword"
+                        multiple-close-text="Close"
+                        multiple-search-no-results-text="No results found"
+                        multiple-all-text="Select all"
+                        multiple-clear-all-text="Clear all"
+                        ecl-script=true
+                        name="ecl-select"
+                        width=m>
+                <optgroup label="European countries">
+                    <option value=1>Belgium</option>
+                    <option value=2>France</option>
+                    <option value=3
+                            disabled>Luxembourg</option>
+                    <option value=4>Germany</option>
+                    <option value=5
+                            selected>Bulgaria</option>
+                    <option value=6>Italy</option>
+                    <option value=7>Romania</option>
+                    <option value=8>Greece</option>
+                    <option value=9>Hungary</option>
+                    <option value=10>Portugal</option>
+                </optgroup>
+                <optgroup label="Non European countries">
+                    <option value=11>China</option>
+                    <option value=11>Turkey</option>
+                </optgroup>
+            </ecl-select>
+        </ecl-form-group>
+
+        <ecl-form-group helper-text="This is the input helper text."
+                        helper-id="helper-id"
+                        invalid=false
+                        invalid-text="This is the error message"
+                        invalid-icon="error"
+                        optional-text="(optional)"
+                        label="Label"
+                        required=true
+                        disabled="false">
+            <ecl-textarea required=true
+                          invalid=false
+                          disabled=false
+                          name="ecl-textarea"
+                          width="m"
+                          textarea-id=textarea-id>
+            </ecl-textarea>
+        </ecl-form-group>
+
+        <ecl-form-group label="Label"
+                        required=true
+                        optional-text="(optional)"
+                        helper-text="This is the input helper text"
+                        invalid=false
+                        disabled=false
+                        invalid-text="This is an error message"
+                        theme="ec">
+            <ecl-input type="range"
+                       theme="ec"
+                       input-id="input-id"
+                       default-value="15"
+                       label=""
+                       required=true
+                       disabled=false
+                       invalid=false
+                       width="m"
+                       placeholder="Placeholder text"
+                       helper-text=""
+                       name="input-name"
+                       min=0
+                       max=30
+                       ecl-script=true
+                       step=1
+                       value-label="Value"
+                       button-choose-label="Choose file"
+                       button-replace-label="Replace file"
+                       multiple="false">
+
+            </ecl-input>
+        </ecl-form-group>
+
+        <ecl-form-group helper-text="This is the group's helper text."
+                        helper-id="helper-id"
+                        invalid-text="This is the error message"
+                        invalid-icon="error"
+                        optional-text="(optional)"
+                        label="Please rate"
+                        required=true
+                        disabled="false"
+                        theme="ec">
+            <ecl-rating-field disabled=false
+                              required=true
+                              theme="ec">
+                <ecl-rating-star theme="ec"
+                                 value="1"
+                                 item-id="item-id-1"
+                                 label="1 star"
+                                 disabled=false
+                                 required=true>
+                </ecl-rating-star>
+                <ecl-rating-star theme="ec"
+                                 value="2"
+                                 item-id="item-id-2"
+                                 label="2 stars"
+                                 disabled=false
+                                 required=true>
+                </ecl-rating-star>
+                <ecl-rating-star theme="ec"
+                                 value="3"
+                                 item-id="item-id-3"
+                                 label="3 stars"
+                                 disabled=false
+                                 required=true>
+                </ecl-rating-star>
+                <ecl-rating-star theme="ec"
+                                 value="4"
+                                 item-id="item-id-4"
+                                 label="4 stars"
+                                 disabled=false
+                                 required=true>
+                </ecl-rating-star>
+                <ecl-rating-star theme="ec"
+                                 value="5"
+                                 item-id="item-id-5"
+                                 label="5 stars"
+                                 disabled=false
+                                 required=true>
+                </ecl-rating-star>
+            </ecl-rating-field>
+        </ecl-form-group>
+
+        <ecl-search-form theme="ec"
+                         input-id="ecl-search-form"
+                         width="m"
+                         placeholder="Placeholder text"
+                         button-label="Search"
+                         button-aria-label="Search">
+        </ecl-search-form>
+
+        <h2>Date block</h2>
+        <ecl-date-block variant="default"
+                        theme="ec"
+                        day="26"
+                        month="Sep"
+                        year="2022"
+                        date-time="2019-09-26">
+        </ecl-date-block>
+
+        <h2>Description List</h2>
+        <ecl-description-list theme="ec"
+                              variant="vertical">
+            <ecl-description-list-term theme="ec">
+                Standard text
+            </ecl-description-list-term>
+            <ecl-description-list-definition type="text"
+                                             theme="ec">
+                Lorem ipsum dolor sit amet, <a href="/component-library/example"
+                   class="ecl-link">consectetur adipiscing elit</a>. Suspendisse ut sapien condimentum, aliquet turpis
+                sit amet, finibus purus. Donec porttitor iaculis felis ut dapibus. Sed blandit, massa ac suscipit
+                facilisis
+            </ecl-description-list-definition>
+            <ecl-description-list-term theme="ec">
+                Standalone links
+            </ecl-description-list-term>
+            <ecl-description-list-definition type="link"
+                                             theme="ec"
+                                             items='[{"label": "Lorem ipsum dolor sit amet", "path": "/example.html", "icon": "copy"},{"label": "Lorem ipsum dolor sit amet", "path": "/example.html", "icon": "download"}]'>
+            </ecl-description-list-definition>
+            <ecl-description-list-term theme="ec">
+                Links inline
+            </ecl-description-list-term>
+            <ecl-description-list-definition type="inline"
+                                             theme="ec"
+                                             items='[{"label": "Lorem ipsum dolor sit amet", "path": "/example.html"},{"label": "Lorem ipsum dolor sit amet", "path": "/example.html"}]'>
+            </ecl-description-list-definition>
+            <ecl-description-list-term theme="ec">
+                Taxonomy list
+            </ecl-description-list-term>
+            <ecl-description-list-definition type="taxonomy"
+                                             theme="ec"
+                                             items='["Taxonomy item 1", {"label": "Taxonomy item 2", "path": "/example.html"}, "Taxonomy item 3"]'>
+            </ecl-description-list-definition>
+        </ecl-description-list>
+
+        <h2>Banner</h2>
+        <ecl-banner variant="plain-background"
+                    theme="ec"
+                    cta-link="/example.html"
+                    cta-label="Subscribe"
+                    image="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+                    banner-title="Headline sed elit lorem."
+                    credit="© Copyright or credit"
+                    centered=true
+                    size="m">
+            Pellentesque tempor tincidunt quam, finibus vulputate eros iaculis pharetra orci arcu, dictum maximus arcu
+            pellentesque eget. Cras massa nunc.
+        </ecl-banner>
+
+        <h3>Carousel</h3>
+        <ecl-carousel carousel-id="ecl-carousel-demo"
+                      ecl-script
+                      slides-number=3>
+            <ecl-carousel-item banner-variant="text-box"
+                               theme="ec"
+                               cta-link="/example.html"
+                               cta-label="Subscribe"
+                               centered=false
+                               size="m"
+                               image="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+                               banner-title="Duis vitae pulvinar turpis">
+                Integer quis lorem tellus. Nullam sollicitudin suscipit diam, ac blandit ipsum tempor consectetur
+            </ecl-carousel-item>
+            <ecl-carousel-item banner-variant="text-highlight"
+                               theme="ec"
+                               cta-link="/example.html"
+                               cta-label="Subscribe"
+                               centered=false
+                               size="m"
+                               image="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+                               banner-title="Duis vitae pulvinar turpis">
+                Integer quis lorem tellus. Nullam sollicitudin suscipit diam, ac blandit ipsum tempor consectetur
+            </ecl-carousel-item>
+            <ecl-carousel-item banner-variant="image-overlay"
+                               theme="ec"
+                               cta-link="/example.html"
+                               size="m"
+                               cta-label="Subscribe"
+                               image="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+                               banner-title="Duis vitae pulvinar turpis">
+                Integer quis lorem tellus. Nullam sollicitudin suscipit diam, ac blandit ipsum tempor consectetur
+            </ecl-carousel-item>
+        </ecl-carousel>
+
+        <h2>Category filter</h2>
+        <ecl-category-filter theme="ec"
+                             ecl-script>
+            <ecl-category-filter-item path="/example.html"
+                                      label="Item 1 label"
+                                      level="1">
+            </ecl-category-filter-item>
+            <ecl-category-filter-item path="/example.html"
+                                      label="Item 2 label"
+                                      level="1"
+                                      sub-items>
+                <ecl-category-filter-item path="/example.html"
+                                          label="Item 2.1"
+                                          level="2"
+                                          sub-items>
+                    <ecl-category-filter-item label="Item 2.1.1"
+                                              path="/example.html"
+                                              level="3"></ecl-category-filter-item>
+                    <ecl-category-filter-item label="Item 2.1.2 "
+                                              path="/example.html"
+                                              level="3"
+                                              sub-items>
+                        <ecl-category-filter-item label="Item 2.1.2 a"
+                                                  path="/example.html"
+                                                  level="4">
+                        </ecl-category-filter-item>
+                        <ecl-category-filter-item label="Item 2.1.2 b"
+                                                  path="/example.html"
+                                                  level="4">
+                        </ecl-category-filter-item>
+                        <ecl-category-filter-item label="Item 2.1.2 c"
+                                                  path="/example.html"
+                                                  level="4">
+                        </ecl-category-filter-item>
+                    </ecl-category-filter-item>
+                    <ecl-category-filter-item path="/example.html"
+                                              label="Item 2.1.3"
+                                              level="3">
+                    </ecl-category-filter-item>
+                    <ecl-category-filter-item path="/example.html"
+                                              label="Item 2.1.4"
+                                              level="3">
+                    </ecl-category-filter-item>
+                </ecl-category-filter-item>
+                <ecl-category-filter-item label="Item 2.2"
+                                          path="/example.html"
+                                          level="2">
+                </ecl-category-filter-item>
+                <ecl-category-filter-item label="Item 2.3"
+                                          path="/example.html"
+                                          level="2">
+                </ecl-category-filter-item>
+                <ecl-category-filter-item label="Item 2.4"
+                                          path="/example.html"
+                                          level="2">
+                </ecl-category-filter-item>
+                <ecl-category-filter-item label="Item 2.5"
+                                          path="/example.html"
+                                          level="2">
+                </ecl-category-filter-item>
+                <ecl-category-filter-item label="Item 2.6"
+                                          path="/example.html"
+                                          level="2">
+                </ecl-category-filter-item>
+                <ecl-category-filter-item label="Item 2.7"
+                                          path="/example.html"
+                                          level="2">
+                </ecl-category-filter-item>
+            </ecl-category-filter-item>
+            <ecl-category-filter-item path="/example.html"
+                                      label="Item 3 with a very long label"
+                                      level="1"
+                                      sub-items>
+                <ecl-category-filter-item label="Item 3.1"
+                                          path="/example.html"
+                                          level="2"
+                                          sub-items>
+                    <ecl-category-filter-item label="Item 3.1.1"
+                                              path="/example.html"
+                                              level="3">
+                    </ecl-category-filter-item>
+                    <ecl-category-filter-item label="Item 3.1.2"
+                                              path="/example.html"
+                                              level="3"
+                                              sub-items>
+                        <ecl-category-filter-item label="Item 3.1.2 a"
+                                                  path="/example.html"
+                                                  level="4">
+                        </ecl-category-filter-item>
+                        <ecl-category-filter-item label="Item 3.1.2 b"
+                                                  path="/example.html"
+                                                  level="4">
+                        </ecl-category-filter-item>
+                        <ecl-category-filter-item label="Item 3.1.2 c"
+                                                  path="/example.html"
+                                                  level="4">
+                        </ecl-category-filter-item>
+                    </ecl-category-filter-item>
+                    <ecl-category-filter-item label="Item 3.1.3"
+                                              path="/example.html"
+                                              level="3">
+                    </ecl-category-filter-item>
+                    <ecl-category-filter-item label="Item 3.1.4"
+                                              path="/example.html"
+                                              level="3">
+                    </ecl-category-filter-item>
+                </ecl-category-filter-item>
+                <ecl-category-filter-item label="Item 3.2"
+                                          path="/example.html"
+                                          level="2">
+                </ecl-category-filter-item>
+                <ecl-category-filter-item label="Item 3.3"
+                                          path="/example.html"
+                                          level="2">
+                </ecl-category-filter-item>
+            </ecl-category-filter-item>
+            <ecl-category-filter-item label="Item 4"
+                                      path="/example.html"
+                                      level="1">
+            </ecl-category-filter-item>
+        </ecl-category-filter>
+
+        <h2>Content item</h2>
+        <ecl-content-item theme="ec"
+                          image-position="left"
+                          image-alt="Alternative text"
+                          image-size="large">
+            <ecl-picture slot="picture"
+                         image="https://inno-ecl.s3.amazonaws.com/media/examples/example-image2.jpg">
+                <source media="(min-width: 480px)"
+                        type="image/jpg"
+                        srcset="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg">
+            </ecl-picture>
+            <ecl-content-block slot="content-block"
+                               theme="ec"
+                               meta-primary='["PRIMARY META", "DD Month Year"]'
+                               meta-secondary='[{"label": "2018/10/22", "icon": "calendar"}, {"label": "Luxembourg", "icon": "location"}]'
+                               has-title
+                               has-description
+                               has-lists
+                               has-labels
+                               has-links
+                               has-secondary-links>
+                <ecl-label slot="labels"
+                           variant="highlight"
+                           theme="ec">
+                    Highlight
+                </ecl-label>
+                <ecl-label slot="labels"
+                           variant="high"
+                           theme="ec">
+                    High importance
+                </ecl-label>
+                <p slot="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida ipsum
+                    ut lorem cursus,
+                    quis tincidunt sem viverra. Nunc vestibulum, mauris quis porta venenatis, justo odio commodo tellus
+                </p>
+                <ecl-link theme="ec"
+                          slot="title"
+                          path="/example.html"
+                          variant="standalone">
+                    Title
+                </ecl-link>
+                <ecl-link slot="links"
+                          theme="ec"
+                          variant="standalone"
+                          path="/example.html">
+                    Primary Link 1
+                </ecl-link>
+                <ecl-link slot="links"
+                          theme="ec"
+                          variant="standalone"
+                          path="/example.html">
+                    Primary Link 2
+                </ecl-link>
+                <ecl-link slot="links"
+                          theme="ec"
+                          variant="standalone"
+                          path="/example.html">
+                    Primary Link 3
+                </ecl-link>
+                <ecl-link slot="links"
+                          theme="ec"
+                          variant="standalone"
+                          path="/example.html">
+                    Primary Link 4
+                </ecl-link>
+                <ecl-link slot="links-secondary"
+                          theme="ec"
+                          variant="standalone"
+                          path="/example.html">
+                    Secondary Link 1
+                </ecl-link>
+                <ecl-link slot="links-secondary"
+                          theme="ec"
+                          variant="standalone"
+                          path="/example.html">
+                    Secondary Link 2
+                </ecl-link>
+                <ecl-description-list theme="ec"
+                                      slot="lists">
+                    <ecl-description-list-term theme="ec">
+                        Standard text
+                    </ecl-description-list-term>
+                    <ecl-description-list-definition type="text"
+                                                     theme="ec">
+                        Lorem ipsum dolor sit amet, <a href="/component-library/example"
+                           class="ecl-link">consectetur adipiscing elit</a>. Suspendisse ut sapien condimentum, aliquet
+                        turpis sit amet, finibus purus. Donec porttitor iaculis felis ut dapibus. Sed blandit, massa ac
+                        suscipit facilisis
+                    </ecl-description-list-definition>
+                    <ecl-description-list-term theme="ec">
+                        Standalone links
+                    </ecl-description-list-term>
+                    <ecl-description-list-definition type="link"
+                                                     theme="ec"
+                                                     items='[{"label": "Lorem ipsum dolor sit amet", "path": "/example.html", "icon": "copy"},{"label": "Lorem ipsum dolor sit amet", "path": "/example.html", "icon": "download"}]'>
+                    </ecl-description-list-definition>
+                    <ecl-description-list-term theme="ec">
+                        Links inline
+                    </ecl-description-list-term>
+                    <ecl-description-list-definition type="inline"
+                                                     theme="ec"
+                                                     items='[{"label": "Lorem ipsum dolor sit amet", "path": "/example.html"},{"label": "Lorem ipsum dolor sit amet", "path": "/example.html"}]'>
+                    </ecl-description-list-definition>
+                    <ecl-description-list-term theme="ec">
+                        Taxonomy list
+                    </ecl-description-list-term>
+                    <ecl-description-list-definition type="taxonomy"
+                                                     theme="ec"
+                                                     items='["Taxonomy item 1",{"label": "Taxonomy item 2", "path": "/example.html"},"Taxonomy item 3"]'>
+                    </ecl-description-list-definition>
+                </ecl-description-list>
+            </ecl-content-block>
+        </ecl-content-item>
+
+        <h2>Timeline</h2>
+        <ecl-timeline theme="ec"
+                      ecl-script>
+            <ecl-timeline-item label="13 September 2017"
+                               item-title="Item title"
+                               itemId="0">
+                <a href="/example.html"
+                   class="ecl-link">President Juncker's State of the Union speech</a>
+            </ecl-timeline-item>
+            <ecl-timeline-item item-id="1"
+                               label="28-29 September 2017">
+                <a href="/example.html"
+                   class="ecl-link">Informal Digital Summit, Tallinn</a>
+            </ecl-timeline-item>
+            <ecl-timeline-item item-id="2"
+                               label="14 November 2017">
+                <a href="/example.html"
+                   class="ecl-link">Strengthening European identity through education and culture: European Commission's
+                    contribution to the Leaders' meeting, Gothenburg, Sweden</a>
+            </ecl-timeline-item>
+            <ecl-timeline-item item-id="3"
+                               label="17 November 2017">
+                <a href="/example.html"
+                   class="ecl-link">Social Summit in Gothenburg, Sweden</a>
+            </ecl-timeline-item>
+            <ecl-timeline-item item-id="4"
+                               label="6 December 2017">
+                <a href="/example.html"
+                   class="ecl-link">Economic and Monetary Union package of proposals</a>
+            </ecl-timeline-item>
+            <ecl-timeline-item type="toggle">
+                Show/Hide hidden items
+            </ecl-timeline-item>
+            <ecl-timeline-item item-id="5"
+                               label="14-15 December 2017"
+                               style-class="ecl-timeline__item--collapsed">
+                <a href="/example.html"
+                   class="ecl-link">EU Leaders' meeting on migration, Brussels</a>
+            </ecl-timeline-item>
+            <ecl-timeline-item item-id="6"
+                               label="15 December 2017">
+                <a href="/example.html"
+                   class="ecl-link">Euro Summit</a>
+            </ecl-timeline-item>
+            <ecl-timeline-item item-id="7"
+                               label="6 February 2018">
+                <a href="/example.html"
+                   class="ecl-link">EU-Western Balkans Strategy</a>
+            </ecl-timeline-item>
+            <ecl-timeline-item item-id="8"
+                               label="14 February 2018">
+                <a href="/example.html"
+                   class="ecl-link">Multiannual Financial Framework</a> and <a href="/example.html"
+                   class="ecl-link">institutional issues</a> - enhancing efficiency at the helm of the European Union
+            </ecl-timeline-item>
+            <ecl-timeline-item item-id="9"
+                               label="23 February 2018">
+                <a href="/example.html"
+                   class="ecl-link">Informal European Council</a>
+            </ecl-timeline-item>
+            <ecl-timeline-item item-id="10"
+                               label="22-23 March 2018">
+                <a href="/example.html"
+                   class="ecl-link">European Council</a>
+            </ecl-timeline-item>
+            <ecl-timeline-item item-id="11"
+                               label="2 May 2018">
+                <a href="/example.html"
+                   class="ecl-link">Commission proposal: Long-term budget post-2020</a>
+            </ecl-timeline-item>
+            <ecl-timeline-item item-id="12"
+                               label="15 May 2018">
+                <a href="/example.html"
+                   class="ecl-link">European Commission’s contribution to the Informal Leaders' meeting</a>, Sofia,
+                Bulgaria (16 May 2018)
+            </ecl-timeline-item>
+            <ecl-timeline-item item-id="13"
+                               label="17 May 2018">
+                <a href="/component-library/example"
+                   class="ecl-link">EU-Western Balkans Summit</a> (Sofia, Bulgaria)
+            </ecl-timeline-item>
+        </ecl-timeline>
+
     </eui-page-content>
 </eui-page>
